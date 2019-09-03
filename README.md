@@ -6,9 +6,11 @@ In this lab you'll set up the tools that you will need for this course on your c
 
 JupyterLab is the next-generation user interface for Project Jupyter. It enables users to use tools such Jupyter Notebook, text editor, terminal all in a flexible, integrated, and extensible manner.
 
-![JupyterLab Interface](img/interface_jupyterlab.png)
+<!-- ![JupyterLab Interface](img/interface_jupyterlab.png) -->
+<img src="img/interface_jupyterlab.png" width="60%"/>
 
-<br>
+
+
 
 Luckily, Brown University has developed the [Brown JupyterHub](https://docs.ccv.brown.edu/jupyterhub/) to provide an environment that is designed to run JupyterLab and Jupyter Notebook without the need to install any software or packages. JupyterHub is interacted with completely through a web browser. This service is a collaboration supported by various teams in CIS. 
 
@@ -45,16 +47,23 @@ Once you have a GitHub account, you must join your classes corresponding GitHub 
 ## Assignments Workflow
 
 **Prerequisites(only need to be done once):**  Syncing JupyterHub and GitHub:
-1. In Brown JupyterHub, create a new **Terminal** from Launcher. ![terminal](img/terminal.png)
+1. In Brown JupyterHub, create a new **Terminal** from Launcher. 
+    <!-- ![terminal](img/terminal.png) -->
+    <img src="img/terminal.png" width="50%" />
 2. In the terminal type the gitconfig command: `gitconfig -u your_github_username -n your_name -e your@email.com`. Enter your GitHub password when asked.
 3. Then, you will get this message: *The authenticity of host 'github.com (192.30.253.113)' can't be established. RSA key fingerprint is (some gibberish). Are you sure you want to continue connecting (yes/no)?* **Type yes and hit Enter.**
-
+> **Troubleshooting**  
+> If you see a message saying "sorry, try again" after some progress bar, chances are you are just fine. Checkout your 
+> github keys at [https://github.com/settings/keys](https://github.com/settings/keys). 
+> If there is a key named like "jupyter-yourName-XXXX", your key is already registered and you can proceed.
 
 **For every assignment with assignment link provided:**
 1. Accept GitHub assignment by by clicking on the corresponding assignment link that will be provided when assignment is released.
 
-![Accept GitHub assignment](img/accept.gif)
-![Accepted GitHub assignment](img/accepted.png)
+<!-- ![Accept GitHub assignment](img/accept.gif) -->
+<img src="img/accept.gif" width="50%" />
+<!-- ![Accepted GitHub assignment](img/accepted.png) -->
+<img src="img/accepted.png" width="50%">
 
 2. Now you have created the repository for the assignment, you will download the assignment to JupyterHub to start work process. To do this, you will need to get the URL of the GitHub repository you just created: 
 
@@ -62,7 +71,16 @@ Once you have a GitHub account, you must join your classes corresponding GitHub 
 
 3. Open a terminal in Brown JupyterHub's JupyterLab by opening the Git tab on top left.
 4. Clone your assignment to the hub using the git clone command `git clone <gitURL>`. Replace <gitURL> with copied URL from Step 2.
-    
+> **Troubleshooting**  
+> If you see an error on "Load key /home/jovyan/.ssh/id_rsa: bad permissions",
+> type `chmod 600 ~/.ssh/id_rsa` and you should be able to use `git clone`.
+> This problem is caused by inappropriate access permission (controlled by ACL)
+> is set for encryption key. 
+> This command fix the problem by disallowing other users to make read/write on the key. 
+>
+> This key is used for signature - to identify you as an authorized user without 
+> needing to use a password.   
+
 **Submitting your work:**
 Once you have completed your assignment and are ready to turn it in, please follow the following steps from the root of the assignment directory.
 
@@ -107,24 +125,9 @@ output = []
 for number in range(1,10):
     output.append(number)
     
-if len(output) is not 10:
+if len(output) != 10:
     raise Exception('Output does not contain numbers 1 to 10')
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    Exception                                 Traceback (most recent call last)
-
-    <ipython-input-1-3d246fdaeab4> in <module>
-          6 
-          7 if len(output) is not 10:
-    ----> 8     raise Exception('Output does not contain numbers 1 to 10')
-    
-
-    Exception: Output does not contain numbers 1 to 10
-
-
 
 ```
 # Use %debug to find out what is wrong
@@ -132,15 +135,14 @@ if len(output) is not 10:
 %debug
 ```
 
-### Put your answer to above here:
-
-<br>
+### This 1 or 2 sentence to explain how you identify the problem with debug. 
 
 
 ## Conclusion
-To complete this lab, you will need to the clone repository for this lab, download the assignment to Brown JupyterHub, edit this file by answering the above question, commit and then push your changes. That's it! Welcome to DATA 1050!
+To complete this lab, you will need to 
+- clone the repository for this lab to Brown JupyterHub.
+- edit this file by answering the above question.
+- use `git add`, `git commit` and then `git push` to submit your changes. 
+- goto your github repo and make sure everything is submitted as desired.
+- That's it! **Welcome to DATA 1050!**
 
-
-```
-
-```
