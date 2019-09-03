@@ -135,7 +135,7 @@ if len(output) != 10:
 %debug
 ```
 
-### This 1 or 2 sentence to explain how you identify the problem with debug. 
+### Use 1 or 2 sentence to explain how you identify the problem with debug. 
 
 
 ## Conclusion
