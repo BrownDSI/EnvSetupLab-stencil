@@ -39,14 +39,15 @@ Once authenticated, you should automatically be logged in and a JupyterHub serve
 GitHub Classroom is a way to distribute coding homework assignments though the use of Git, a powerful tool for version control and remote storage of programming projects. For your work on Brown's JupyterHub, GitHub is the recommended method for saving and storing your active projects as it is not only the industry standard, but you can take your projects with you as the foundation of your programming portfolio.
 
 ### Create a GitHub Account
-In order to use GitHub classroom, you must first create a GitHub account (if you already have an existing account, you can skip this step). To create an account, go to https://github.com/join and complete the account creation process. We recommend you use an appropriate username is it is publicly visible.
+In order to use GitHub Classroom, you must first create a GitHub account (if you already have an existing account, you can skip this step). To create an account, go to https://github.com/join and complete the account creation process. We recommend you use an appropriate username, as it is publicly visible.
 
 ### Join GitHub Classroom
-Once you have a GitHub account, you must join your classes corresponding GitHub Classroom organization. To do this, follow the link provided by your instructor's classroom invitation link. This will require you to sign in to your GitHub account, and then you will automatically become linked! **TODO: prvide our classroom link**
+Once you have a GitHub account, you must join your class's corresponding GitHub Classroom organization. To do this, follow the classroom invitation link provided by your instructor. This will require you to sign in to your GitHub account, and then you will automatically become linked! **TODO: prvide our classroom link**
 
 ## Assignments Workflow
 
-**Prerequisites(only need to be done once):**  Syncing JupyterHub and GitHub:
+**Prerequisites(only needs to be done once):**  
+Syncing JupyterHub and GitHub:
 1. In Brown JupyterHub, create a new **Terminal** from Launcher. 
     <!-- ![terminal](img/terminal.png) -->
     <img src="img/terminal.png" width="50%" />
