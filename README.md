@@ -42,7 +42,11 @@ GitHub Classroom is a way to distribute coding homework assignments though the u
 In order to use GitHub classroom, you must first create a GitHub account (if you already have an existing account, you can skip this step). To create an account, go to https://github.com/join and complete the account creation process. We recommend you use an appropriate username is it is publicly visible.
 
 ### Join GitHub Classroom
-Once you have a GitHub account, you must join your classes corresponding GitHub Classroom organization. To do this, follow the link provided by your instructor's classroom invitation link. This will require you to sign in to your GitHub account, and then you will automatically become linked! **TODO: prvide our classroom link**
+Once you have a GitHub account, you must join your classes corresponding GitHub Classroom organization. 
+To do this, follow the link provided by your instructor's classroom invitation link.
+This will require you to sign in to your GitHub account, and then you will automatically become linked! 
+The invitation link for this lab is [here](https://classroom.github.com/a/ZQybMX5e).
+
 
 ## Assignments Workflow
 
