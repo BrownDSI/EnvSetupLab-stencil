@@ -140,7 +140,7 @@ if len(output) != 10:
 ### Briefly explain how you identifed the problem using `%debug`
 Edit this cell to answer:
 
-Hint: Look at `output`?
+Hint: Look at `output`
 
 ## Conclusion
 In summary, to complete this lab, you will need to 
