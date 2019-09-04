@@ -42,7 +42,8 @@ GitHub Classroom is a way to distribute coding homework assignments though the u
 In order to use GitHub Classroom, you must first create a GitHub account (if you already have an existing account, you can skip this step). To create an account, go to https://github.com/join and complete the account creation process. We recommend you use an appropriate username, as it is publicly visible.
 
 ### Join GitHub Classroom
-Once you have a GitHub account, you must join your class's corresponding GitHub Classroom organization. To do this, follow the classroom invitation link provided by your instructor. This will require you to sign in to your GitHub account, and then you will automatically become linked! **TODO: prvide our classroom link**
+Once you have a GitHub account, you must join your class's corresponding GitHub Classroom organization. To do this, follow the classroom invitation link provided by your instructor. This will require you to sign in to your GitHub account, and then you will automatically become linked! The invitation link for this lab is [here](https://classroom.github.com/a/ZQybMX5e).
+
 
 ## Assignments Workflow
 
@@ -51,39 +52,39 @@ Syncing JupyterHub and GitHub:
 1. In Brown JupyterHub, create a new **Terminal** from Launcher. 
     <!-- ![terminal](img/terminal.png) -->
     <img src="img/terminal.png" width="50%" />
-2. In the terminal type the gitconfig command: `gitconfig -u your_github_username -n your_name -e your@email.com`. Enter your GitHub password when asked.
+2. In the terminal type the gitconfig command: `gitconfig -u your_github_username -n your_Brown_username -e your_Brown_email@brown.edu`. Your Brown username is what you use to login to Brown WiFi and other Brown websites. If you are unsure of your Brown username, go the Brown [directory](https://directory.brown.edu/), click **log in to view more information**, then search your name. After running the command, enter your GitHub password when asked.
 3. Then, you will get this message: *The authenticity of host 'github.com (192.30.253.113)' can't be established. RSA key fingerprint is (some gibberish). Are you sure you want to continue connecting (yes/no)?* **Type yes and hit Enter.**
 > **Troubleshooting**  
 > If you see a message saying "sorry, try again" after some progress bar, chances are you are just fine. Checkout your 
-> github keys at [https://github.com/settings/keys](https://github.com/settings/keys). 
+> Github keys at [https://github.com/settings/keys](https://github.com/settings/keys). 
 > If there is a key named like "jupyter-yourName-XXXX", your key is already registered and you can proceed.
+>
+> If you have two-factor authentication enabled for your GitHub account, you may need to temporaily disable it to be able to use git config. The other option is to manually create ssh keys. If you are having trouble with this, feel free to post on Piazza or come to TA hours.
 
-**For every assignment with assignment link provided:**
-1. Accept GitHub assignment by by clicking on the corresponding assignment link that will be provided when assignment is released.
+**For every assignment:**
+1. Accept GitHub assignment by clicking on the corresponding assignment link that will be provided when assignment is released.
 
 <!-- ![Accept GitHub assignment](img/accept.gif) -->
 <img src="img/accept.gif" width="50%" />
 <!-- ![Accepted GitHub assignment](img/accepted.png) -->
 <img src="img/accepted.png" width="50%">
 
-2. Now you have created the repository for the assignment, you will download the assignment to JupyterHub to start work process. To do this, you will need to get the URL of the GitHub repository you just created: 
+2. Now that you have created the repository for the assignment, you will need to download the assignment to JupyterHub. To do this, you will need to get the URL of the GitHub repository you just created. First click on the link following *Your assignment has been created here:*. Then click on the green `Clone or download` button. 
 
 ![Get repository URL](img/url.png)
 
-3. Open a terminal in Brown JupyterHub's JupyterLab by opening the Git tab on top left.
-4. Clone your assignment to the hub using the git clone command `git clone <gitURL>`. Replace <gitURL> with copied URL from Step 2.
+3. Go to a Terminal window in Brown JupyterHub's JupyterLab. If you do not already have one open, you can open one by clicking on the `Git` tab on top left then clicking `Open Terminal`
+4. Clone your assignment to the hub using the git clone command `git clone <gitURL>`. Replace `<gitURL>` with the copied URL from Step 2.
 > **Troubleshooting**  
-> If you see an error on "Load key /home/jovyan/.ssh/id_rsa: bad permissions",
-> type `chmod 600 ~/.ssh/id_rsa` and you should be able to use `git clone`.
-> This problem is caused by inappropriate access permission (controlled by ACL)
-> is set for encryption key. 
-> This command fix the problem by disallowing other users to make read/write on the key. 
+> If you see the error "Load key /home/jovyan/.ssh/id_rsa: bad permissions",
+> type `chmod 600 ~/.ssh/id_rsa` and then you should be able to use `git clone`.
+> This problem is due to the encryption key having inappropriate access permissions (controlled by Access Control List (ACL))
+> This command above fixes the problem by disallowing other users to perform reads/writes on the key. 
 >
-> This key is used for signature - to identify you as an authorized user without 
-> needing to use a password.   
+> This key is used as a signature, which identifes you as an authorized user without the need for a password.   
 
 **Submitting your work:**
-Once you have completed your assignment and are ready to turn it in, please follow the following steps from the root of the assignment directory.
+Once you have completed your assignment and are ready to turn it in, please run the following commands in a Terminal window from the root of the assignment directory.
 
 1. `git add . ` to add your local changes to staging area.
 2. `git commit -m “(your commit message)”` to commit the local changes to local repository.
@@ -96,7 +97,7 @@ Git is one of the most commonly used systems for version control which allows us
 
 | Git Command | Description |
 |-|-|
-| `git clone URL-or-path-to-repo` | Clone a repository. This makes a new folder in the current directory containing the files in the repository in which you can work on the code. |
+| `git clone URL-or-path-to-repo` | Clone a repository. This makes a new folder in your current directory containing the files in the repository that you are working with. |
 | `git add`                     | Add the given file to the repository so that it will be tracked by git. Use this when you author a new code file and want to include it in a commit. Alternatively, include `-a` to add all files from your local repo |
 | `git commit`                            |  	Finalize the current changes to your code as a commit to your current branch and repo on your local machine. Include `-a` to automatically add changed files that git is already tracking and `-m <message>` to include a message about the commit (otherwise you will be kicked to an editor in which to type out your message).                  |                                                                                                                                                                                                   
 | `git pull`                               |  Pull any changes that have happened on the remote server you initially cloned and bring them into your local repository. You will need to have a clean repo so you will probably want to commit first if you have changes (or stash them). <br><br> (**Note**: A `git pull` is a combination of a `git fetch` and a `git merge` which will lead to extra commits of the form `Merge branch 'master' of ....` For a cleaner history, use `git pull --rebase`)             |  
@@ -109,13 +110,13 @@ Throughout the course, it will also be helpful to have a dedicated place to edit
 ## Debugging
 
 ### `print`
-An easy way to debug your Python program is using `print`. A Python `print` function simply display text in the terminal so you can see what’s going on. This is useful for seeing what the values of certain variables are or just seeing where your program is going as an excuse. 
+An easy way to debug your Python program is using `print`. The Python `print` function simply displays text in the Terminal so you can see what’s going on. This is useful for seeing what the values of certain variables are or just seeing what part of your program is being executed.
 
 
 ### `%debug` magic
 
 The easiest way to debug a Jupyter notebook is to use the `%debug` magic command. Whenever you encounter an error or exception, just open a new notebook cell, type %debug and run the cell. This will open a command line where you can test your code and inspect all variables right up to the line that threw the error.
-Type **“n”** and hit Enter to run the next line of code (The → arrow shows you the current position). Use **“c”** to continue until the next breakpoint. **“q”** quits the debugger and code execution. Here is a practice:
+Type **“n”** and hit Enter to run the next line of code (The --> arrow shows you the current position). Use **“c”** to continue until the next breakpoint. **“q”** quits the debugger and code execution. Let's do some practice!
 
 
 
@@ -136,11 +137,13 @@ if len(output) != 10:
 %debug
 ```
 
-### Use 1 or 2 sentence to explain how you identify the problem with debug. 
+### Briefly explain how you identifed the problem using `%debug`
+Edit this cell to answer:
 
+Hint: What is the value of `output`?
 
 ## Conclusion
-To complete this lab, you will need to 
+In summary, to complete this lab, you will need to 
 - clone the repository for this lab to Brown JupyterHub.
 - edit this file by answering the above question.
 - use `git add`, `git commit` and then `git push` to submit your changes. 
