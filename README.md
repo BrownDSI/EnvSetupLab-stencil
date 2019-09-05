@@ -115,13 +115,15 @@ An easy way to debug your Python program is using `print`. The Python `print` fu
 
 ### `%debug` magic
 
-The easiest way to debug a Jupyter notebook is to use the `%debug` magic command. Whenever you encounter an error or exception, just open a new notebook cell, type %debug and run the cell. This will open a command line where you can test your code and inspect all variables right up to the line that threw the error.
-Type **“n”** and hit Enter to run the next line of code (The --> arrow shows you the current position). Use **“c”** to continue until the next breakpoint. **“q”** quits the debugger and code execution. Let's do some practice!
+The easiest way to debug a Jupyter notebook is to use the `%debug` magic command. Whenever you encounter an error or exception, just open a new notebook cell, type %debug and run the cell. This will open a command line where you can execute any python command/expression at the moment that an Exception is thrown (or a breakpoint is triggered). For example, you can type the name of a variable to print it. Type **“q”** to quit the debugger when you are done.
 
+> `ipdb`: Ipython Debugger  
+> Besides excuting python command, `ipdb` also allows you to walk between lines of code and trace code behaviors. 
+> Type **“n”** and hit Enter to run the next line of code (The → arrow shows you the current position). Use **“c”** to continue until the next breakpoint. 
 
 
 ```
-# Try running this block of code
+# Try running this block of code and you will hit an Exception
 
 output = []
 for number in range(1,10):
@@ -132,7 +134,7 @@ if len(output) != 10:
 ```
 
 ```
-# Use %debug to find out what is wrong
+# Execute this cell, use %debug to find out what is wrong
 
 %debug
 ```
